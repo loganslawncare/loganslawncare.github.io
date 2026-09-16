@@ -1,0 +1,265 @@
+@font-face {
+    font-family: Frutiger;
+    src: url("assets/fonts/Frutiger.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Frutiger;
+    src: url("assets/fonts/Frutiger_bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 960px;
+    min-height: 100vh;
+    margin: 0 auto;
+    color: #174e5e;
+    background: #eafaff url("assets/images/non animated/background_maybe.jpg") center / cover fixed;
+    font: 16px/1.5 Frutiger, Arial, sans-serif;
+}
+
+.site {
+    min-height: 100vh;
+    background: #fff;
+    box-shadow: 0 0 18px #07557077;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 28px;
+    border-bottom: 1px solid #a6dce9;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #087a8b;
+    font-size: 23px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+    padding: 4px;
+    border: 1px solid #71bacb;
+    border-radius: 0;
+    background: #fff;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 17px;
+}
+
+nav a {
+    color: #176e9b;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #4a9e37;
+}
+
+.hero {
+    position: relative;
+    min-height: 285px;
+    overflow: hidden;
+    padding: 55px 45px;
+    color: #fff;
+    background: #24a9df url("assets/images/non animated/bg2.jpg") center / cover;
+}
+
+.hero img {
+    position: absolute;
+    inset: auto 0 0;
+    width: 100%;
+    height: 200%;
+    object-fit: fill;
+    opacity: 1;
+}
+
+.home-hero {
+    background-image: url("assets/images/non animated/background_maybe.jpg");
+}
+
+.services-hero {
+    background-image: url("assets/images/non animated/bg_grassthin.jpg");
+}
+
+.services-hero img {
+    height: 60%;
+}
+
+.about-hero {
+    background-image: url("assets/images/non animated/bg_birds.jpg");
+}
+
+.about-hero img {
+    display: none;
+}
+
+.contact-hero {
+    background-image: url("assets/images/non animated/bg2.jpg");
+}
+
+.hero div {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    text-shadow: 0 2px 4px #075675;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: 43px;
+    line-height: 1.05;
+}
+
+.hero p {
+    margin: 0;
+}
+
+.content {
+    padding: 34px 45px 44px;
+}
+
+.content h2 {
+    margin: 0 0 10px;
+    color: #168279;
+    font-size: 25px;
+}
+
+.content p {
+    max-width: 680px;
+}
+
+.content a {
+    color: #0879ae;
+    font-weight: 700;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.card {
+    padding: 16px;
+    border: 1px solid #b5dfea;
+    border-radius: 7px;
+    background: #f7ffff;
+}
+
+.card h2 {
+    font-size: 19px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.contact-list {
+    padding: 18px;
+    border-left: 4px solid #4eaa39;
+    background: #f3ffe8;
+}
+
+.contact-list p {
+    margin: 5px 0;
+}
+
+form {
+    max-width: 540px;
+}
+
+label {
+    display: block;
+    margin-top: 13px;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #9dceda;
+    border-radius: 3px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 14px;
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    background: #158b9f;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+footer {
+    padding: 15px 28px;
+    border-top: 1px solid #a6dce9;
+    color: #4e7b87;
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    body {
+        width: 100%;
+    }
+
+    .header {
+        display: block;
+        padding: 15px 20px;
+    }
+
+    nav {
+        margin-top: 13px;
+        gap: 13px;
+    }
+
+    .hero,
+    .content {
+        padding: 35px 22px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero img {
+        width: 100%;
+        opacity: 1;
+    }
+
+    .services-hero img {
+        height: 60%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
